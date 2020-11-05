@@ -593,7 +593,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f3b29a75f9e17d46aafeb9c60699f55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  detailLevels:
+  - lod: 0
+    visibleDstThreshold: 200
+  - lod: 4
+    visibleDstThreshold: 400
+  - lod: 6
+    visibleDstThreshold: 600
   viewer: {fileID: 924395231}
+  mapMaterial: {fileID: 2100000, guid: bfaa44498e9462b4496d9dc93c79f0c7, type: 2}
 --- !u!4 &1770294467
 Transform:
   m_ObjectHideFlags: 0
@@ -636,32 +644,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   drawMode: 2
-  levelOfDetail: 6
+  levelOfDetail: 1
   noiseScale: 10
   octaves: 1
   persistance: 0.303
   lacunarity: 3.69
   seed: 10
   offset: {x: 0, y: 0}
-  meshHeightMultiplier: 10
+  meshHeightMultiplier: 15
   meshHeightCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
       time: 1
       value: 1
-      inSlope: 2
-      outSlope: 2
-      tangentMode: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0
