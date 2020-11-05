@@ -22,14 +22,20 @@ public class TerrainGenerator : MonoBehaviour
         Mesh mesh = new Mesh();
 
         Vector3[] vertices = new Vector3[(sizeX + 1) * (sizeY + 1)];
-
         int[] triangles = new int[sizeX * sizeY * 6];
+        Vector2[] uv = new Vector2[vertices.Length];
+        Vector4[] tangents = new Vector4[vertices.Length];
+        Vector4 tangent = new Vector4(1f, 0f, 0f, -1f);
 
         for (int i = 0, y = 0; y <= sizeY; y++)
         {
             for (int x = 0; x <= sizeX; x++, i++)
             {
                 vertices[i] = new Vector3(x, 0, y);
+
+                uv[i] = new Vector2(x / (float)sizeX, y / (float)sizeY);
+
+                tangents[i] = tangent;
             }
         }
 
@@ -46,6 +52,8 @@ public class TerrainGenerator : MonoBehaviour
 
         mesh.vertices = vertices;
         mesh.triangles = triangles;
+        mesh.uv = uv;
+        mesh.tangents = tangents;
 
         mesh.RecalculateNormals();
 
