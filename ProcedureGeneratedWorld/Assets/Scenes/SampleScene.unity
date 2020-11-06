@@ -596,10 +596,13 @@ MonoBehaviour:
   detailLevels:
   - lod: 0
     visibleDstThreshold: 200
+    useForCollider: 0
   - lod: 4
-    visibleDstThreshold: 400
+    visibleDstThreshold: 300
+    useForCollider: 1
   - lod: 6
-    visibleDstThreshold: 600
+    visibleDstThreshold: 500
+    useForCollider: 0
   viewer: {fileID: 924395231}
   mapMaterial: {fileID: 2100000, guid: bfaa44498e9462b4496d9dc93c79f0c7, type: 2}
 --- !u!4 &1770294467
@@ -644,14 +647,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   drawMode: 2
-  levelOfDetail: 1
-  noiseScale: 10
-  octaves: 1
-  persistance: 0.303
-  lacunarity: 3.69
+  normalizeMode: 1
+  editorPreviewLOD: 0
+  noiseScale: 48
+  octaves: 8
+  persistance: 0.5
+  lacunarity: 2
   seed: 10
   offset: {x: 0, y: 0}
-  meshHeightMultiplier: 15
+  useFalloff: 1
+  meshHeightMultiplier: 31
   meshHeightCurve:
     serializedVersion: 2
     m_Curve:
@@ -679,19 +684,19 @@ MonoBehaviour:
   autoUpdate: 0
   regions:
   - name: Water Deep
-    height: 0.3
+    height: 0.1
     colour: {r: 0.106532566, g: 0.22276992, b: 0.5377358, a: 0}
   - name: Water Shallow
-    height: 0.4
+    height: 0.2
     colour: {r: 0.21176472, g: 0.4039216, b: 0.7803922, a: 0}
   - name: Sand
-    height: 0.45
+    height: 0.3
     colour: {r: 0.8235295, g: 0.81568635, b: 0.4901961, a: 0}
   - name: Grass
-    height: 0.55
+    height: 0.4
     colour: {r: 0.3372549, g: 0.59607846, b: 0.09019608, a: 0}
   - name: Grass 2
-    height: 0.6
+    height: 0.5
     colour: {r: 0.24313727, g: 0.41960788, b: 0.07058824, a: 0}
   - name: Rock
     height: 0.7
